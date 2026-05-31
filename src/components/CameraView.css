@@ -1,0 +1,152 @@
+.cameraview {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #000;
+  overflow: hidden;
+}
+
+.camera-video {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.camera-placeholder {
+  display: none;
+  width: 100%; height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+  background: var(--bg3);
+}
+
+/* Scan line effect */
+.scan-overlay {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0,0,0,0.03) 2px,
+    rgba(0,0,0,0.03) 4px
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* HUD corners */
+.hud-corner {
+  position: absolute;
+  width: 24px; height: 24px;
+  border-color: rgba(0, 212, 255, 0.5);
+  border-style: solid;
+  z-index: 5;
+  pointer-events: none;
+}
+.hud-corner.tl { top: 12px; left: 12px; border-width: 2px 0 0 2px; }
+.hud-corner.tr { top: 12px; right: 12px; border-width: 2px 2px 0 0; }
+.hud-corner.bl { bottom: 12px; left: 12px; border-width: 0 0 2px 2px; }
+.hud-corner.br { bottom: 12px; right: 12px; border-width: 0 2px 2px 0; }
+
+/* Top HUD */
+.cam-hud-top {
+  position: absolute;
+  top: 12px; left: 50%;
+  transform: translateX(-50%);
+  display: flex; gap: 8px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.hud-pill {
+  background: rgba(0,0,0,0.55);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text2);
+  display: flex; align-items: center; gap: 6px;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(4px);
+}
+
+.hud-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--red);
+  box-shadow: 0 0 6px var(--red);
+  animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* Minimap */
+.minimap {
+  position: absolute;
+  bottom: 12px; left: 64px;
+  width: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  z-index: 10;
+  transition: border-color 0.15s;
+}
+.minimap:hover { border-color: var(--accent); }
+
+.minimap-canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.minimap-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  padding: 14px 8px 5px;
+  font-size: 10px;
+  color: var(--text2);
+  font-family: var(--mono);
+  text-align: center;
+  letter-spacing: 0.3px;
+}
+
+/* Telemetry */
+.cam-telemetry {
+  position: absolute;
+  bottom: 12px; right: 80px;
+  display: flex; gap: 6px;
+  z-index: 10;
+}
+
+.telem-item {
+  background: rgba(0,0,0,0.6);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 12px;
+  display: flex; flex-direction: column;
+  gap: 2px;
+  backdrop-filter: blur(4px);
+}
+
+.telem-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--text2);
+  letter-spacing: 1px;
+}
+
+.telem-val {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--text);
+  font-weight: 500;
+}
