@@ -51,7 +51,7 @@ The compiled files will be output to the `dist/` folder, which can be served usi
 
 ## Dashboard Preview
 
-[Dashboard Screenshot](screenshot.png)
+(screenshot.png)
 
 ## Demo Video
 
