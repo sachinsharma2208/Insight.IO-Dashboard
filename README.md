@@ -60,6 +60,8 @@ The compiled files will be output to the `dist/` folder, which can be served usi
 
 ## Contact Detail
 
-Full Name: Sachin Sharma
-Contact Number: 7720800412
-Email ID: sachinsharma34501@gmail.com
+* Name: Sachin Sharma
+
+* Contact Number: 7720800412
+
+* Email ID: sachinsharma34501@gmail.com
