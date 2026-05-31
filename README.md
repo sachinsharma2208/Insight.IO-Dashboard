@@ -48,3 +48,11 @@ The compiled files will be output to the `dist/` folder, which can be served usi
 *   **Dynamic Views**: Ability to swap between 3D Map, 2D Top-Down Map, and Camera views seamlessly.
 *   **Responsive Sidebar**: Functional state-mapped sidebar navigation.
 *   **Status Readouts**: Top bar telemetry simulation with battery and signal status.
+
+## Dashboard Preview
+
+[Dashboard Screenshot](screenshot.png)
+
+## Demo Video
+
+[Click here to watch the demo](demo.mp4)
