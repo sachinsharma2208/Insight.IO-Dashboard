@@ -51,7 +51,8 @@ The compiled files will be output to the `dist/` folder, which can be served usi
 
 ## Dashboard Preview
 
-(screenshot.png)
+<img width="1911" height="867" alt="screenshot" src="https://github.com/user-attachments/assets/e2289ac3-79c4-422f-ba08-3d28554e7608" />
+
 
 ## Demo Video
 
